@@ -58,6 +58,14 @@ describe('fizzbuzz', () => {
       fizzbuzzInstance(5);
 
       expect(output.print.mock.calls[0][0]).toBe('Buzz');
-    })
+    });
+  });
+
+  describe('For numbers that are multiples of both three and five, it returns “FizzBuzz.”', () => {
+    it('outputs "FizzBuzz" when a number is divisible by 3 and 5', () => {
+      fizzbuzzInstance(15);
+
+      expect(output.print.mock.calls[0][0]).toBe('FizzBuzz');
+    });
   });
 });

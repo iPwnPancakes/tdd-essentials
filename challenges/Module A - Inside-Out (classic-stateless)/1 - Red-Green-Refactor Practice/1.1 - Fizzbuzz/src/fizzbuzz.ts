@@ -7,10 +7,12 @@ export function fizzbuzz(output: IOutput) {
       throw new InvalidParameterError('Parameter must be between 1 and 100');
     }
 
-    if (number % 3 === 0) {
-      output.print('Fizz');
+    if (number % 3 === 0 && number % 5 === 0) {
+      output.print('FizzBuzz');
     } else if (number % 5 === 0) {
       output.print('Buzz');
+    } else if (number % 3 === 0) {
+      output.print('Fizz');
     } else {
       output.print(String(number));
     }
