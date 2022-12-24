@@ -44,4 +44,12 @@ describe('fizzbuzz', () => {
       expect(typeof output.print.mock.calls[0][0]).toBe('string');
     });
   });
+
+  describe('but for multiples of three it returns “Fizz” instead of the number', () => {
+    it('outputs "Fizz" when number is divisible by 3', () => {
+      fizzbuzzInstance(3);
+
+      expect(output.print.mock.calls[0][0]).toBe('Fizz');
+    });
+  });
 });
