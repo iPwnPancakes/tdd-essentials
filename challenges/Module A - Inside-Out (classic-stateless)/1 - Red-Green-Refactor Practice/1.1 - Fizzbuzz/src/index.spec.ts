@@ -52,4 +52,12 @@ describe('fizzbuzz', () => {
       expect(output.print.mock.calls[0][0]).toBe('Fizz');
     });
   });
+
+  describe('and for multiples of five it returns “Buzz.”', function () {
+    it('outputs "Buzz" when a number is divisible by 5', () => {
+      fizzbuzzInstance(5);
+
+      expect(output.print.mock.calls[0][0]).toBe('Buzz');
+    })
+  });
 });

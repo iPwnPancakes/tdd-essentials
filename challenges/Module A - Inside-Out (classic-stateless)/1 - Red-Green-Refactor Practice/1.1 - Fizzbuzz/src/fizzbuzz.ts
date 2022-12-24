@@ -9,6 +9,8 @@ export function fizzbuzz(output: IOutput) {
 
     if (number % 3 === 0) {
       output.print('Fizz');
+    } else if (number % 5 === 0) {
+      output.print('Buzz');
     } else {
       output.print(String(number));
     }
