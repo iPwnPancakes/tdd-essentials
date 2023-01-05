@@ -1,7 +1,6 @@
 export function isPalindrome(str: string): boolean {
-    if (str.toLowerCase() === 'bill') {
-        return false;
-    }
+    const originalWord = str.replace(/\s/g, '').toLowerCase();
+    const reversedWord = str.split('').reverse().join('').replace(/\s/g, '').toLowerCase();
 
-    return true;
+    return reversedWord === originalWord;
 }
