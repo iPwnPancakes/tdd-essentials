@@ -22,4 +22,14 @@ describe('palindrome checker', () => {
             expect(isPalindrome('Mom')).toBeTruthy();
         })
     })
+
+    describe('It should also be able to detect palindromes in phrases like "Was It A Rat I Saw" and "Never Odd or Even" too', () => {
+        it('should return true for "Was It A Rat I Saw"', () => {
+            expect(isPalindrome('Was It A Rat I Saw')).toBeTruthy();
+        })
+
+        it('should return true for "Never Odd or Even"', () => {
+            expect(isPalindrome('Never Odd or Even')).toBeTruthy();
+        })
+    })
 })
