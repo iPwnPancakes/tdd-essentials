@@ -16,4 +16,10 @@ describe('palindrome checker', () => {
             expect(isPalindrome('bill')).toBeFalsy();
         })
     })
+
+    describe('It should still know that something is a palindrome, even if the casing is off', () => {
+        it('should return true for "Mom"', () => {
+            expect(isPalindrome('Mom')).toBeTruthy();
+        })
+    })
 })
