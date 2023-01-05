@@ -10,4 +10,10 @@ describe('palindrome checker', () => {
             expect(isPalindrome('wow')).toBeTruthy();
         })
     })
+
+    describe('It also means that words like "bill" are not palindromes', () => {
+        it('should return false for "bill"', () => {
+            expect(isPalindrome('bill')).toBeFalsy();
+        })
+    })
 })
