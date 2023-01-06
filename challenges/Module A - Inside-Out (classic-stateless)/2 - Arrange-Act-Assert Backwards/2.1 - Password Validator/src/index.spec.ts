@@ -27,6 +27,10 @@ describe('password validator', () => {
         it('should return false for 123456789abcdef', () => {
             expect(isPasswordValid('123456789abcdef')).toBeFalsy();
         })
+
+        it('should return false if no digits in string', () => {
+            expect(isPasswordValid('ABCDEFG')).toBeFalsy();
+        })
     })
 })
 

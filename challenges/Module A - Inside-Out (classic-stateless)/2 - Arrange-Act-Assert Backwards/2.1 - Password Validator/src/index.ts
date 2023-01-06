@@ -1,5 +1,6 @@
 export function isPasswordValid(str: string): boolean {
     return str.length >= 5 &&
         str.length <= 15 &&
-        /[A-Z]/.test(str);
+        /[A-Z]/.test(str) &&
+        /[0-9]/.test(str);
 }
