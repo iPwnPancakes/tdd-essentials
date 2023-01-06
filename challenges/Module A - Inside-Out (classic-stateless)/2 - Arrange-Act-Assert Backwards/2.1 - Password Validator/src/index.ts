@@ -1,3 +1,3 @@
 export function isPasswordValid(str: string): boolean {
-    return true;
+    return str.length >= 5;
 }
