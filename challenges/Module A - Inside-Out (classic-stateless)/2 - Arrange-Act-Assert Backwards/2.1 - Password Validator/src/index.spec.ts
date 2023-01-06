@@ -47,6 +47,10 @@ describe('password validator', () => {
         it('should return an error if string is too big', () => {
             expect(isPasswordValid('123456789ABCDEFF').errors).toHaveLength(1);
         })
+
+        it('should return an error if string has no upper case letters', () => {
+            expect(isPasswordValid('123456').errors).toHaveLength(1);
+        })
     })
 })
 

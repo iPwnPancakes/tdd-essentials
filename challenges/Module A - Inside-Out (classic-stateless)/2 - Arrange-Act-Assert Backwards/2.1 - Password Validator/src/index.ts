@@ -18,5 +18,9 @@ export function isPasswordValid(str: string): PasswordValidityResult {
         errors.push('Password must have more than 15 characters');
     }
 
+    if (!(/[A-Z]/.test(str))) {
+        errors.push('Password must contain at least one upper case letter');
+    }
+
     return { valid, errors };
 }
