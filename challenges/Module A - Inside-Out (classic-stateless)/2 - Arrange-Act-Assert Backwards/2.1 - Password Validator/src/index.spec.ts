@@ -37,6 +37,10 @@ describe('password validator', () => {
         it('should return an object', () => {
             expect(typeof isPasswordValid('ABCDEFG')).toBe('object');
         })
+
+        it('should return an error if not valid', () => {
+            expect(isPasswordValid('ABCD').errors).toHaveLength(1);
+        })
     })
 })
 
