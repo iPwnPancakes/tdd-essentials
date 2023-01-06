@@ -43,6 +43,10 @@ describe('password validator', () => {
         it('should return an error if string is too small', () => {
             expect(isPasswordValid('ABCD').errors).toHaveLength(1);
         })
+
+        it('should return an error if string is too big', () => {
+            expect(isPasswordValid('123456789ABCDEFF').errors).toHaveLength(1);
+        })
     })
 })
 

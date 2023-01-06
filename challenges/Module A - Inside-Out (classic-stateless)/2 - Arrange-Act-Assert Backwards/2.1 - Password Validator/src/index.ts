@@ -14,5 +14,9 @@ export function isPasswordValid(str: string): PasswordValidityResult {
         errors.push('Password must be at least 5 characters');
     }
 
+    if (!(str.length <= 15)) {
+        errors.push('Password must have more than 15 characters');
+    }
+
     return { valid, errors };
 }
