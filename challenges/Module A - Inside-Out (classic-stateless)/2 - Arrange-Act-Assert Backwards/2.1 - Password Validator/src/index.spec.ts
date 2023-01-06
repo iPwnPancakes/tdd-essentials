@@ -5,6 +5,10 @@ describe('password validator', () => {
         it('returns true for strings with 5 characters', () => {
             expect(isPasswordValid('12345')).toBeTruthy();
         })
+
+        it('returns true for strings with 15 characters', () => {
+            expect(isPasswordValid('123456789ABCDEF')).toBeTruthy();
+        })
     })
 })
 
