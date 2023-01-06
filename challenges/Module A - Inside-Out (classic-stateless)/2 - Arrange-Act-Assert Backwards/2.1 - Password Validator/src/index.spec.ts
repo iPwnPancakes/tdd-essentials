@@ -24,7 +24,7 @@ describe('password validator', () => {
             expect(isPasswordValid('123456789ABCDEF')).toBeTruthy();
         })
 
-        it('should return false for 123456789abcdef', () => {
+        it('should return false if no upper case letters in string', () => {
             expect(isPasswordValid('123456789abcdef')).toBeFalsy();
         })
 
