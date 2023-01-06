@@ -41,7 +41,7 @@ describe('password validator', () => {
 
     describe('and an errors key that contains an error message or type for all errors in occurrence', () => {
         it('should return an error if string is too small', () => {
-            expect(isPasswordValid('ABCD').errors).toHaveLength(1);
+            expect(isPasswordValid('ABC1').errors).toHaveLength(1);
         })
 
         it('should return an error if string is too big', () => {
@@ -50,6 +50,10 @@ describe('password validator', () => {
 
         it('should return an error if string has no upper case letters', () => {
             expect(isPasswordValid('123456').errors).toHaveLength(1);
+        })
+
+        it('should return an error if string has no numbers', () => {
+            expect(isPasswordValid('ABCDEF').errors).toHaveLength(1);
         })
     })
 })
