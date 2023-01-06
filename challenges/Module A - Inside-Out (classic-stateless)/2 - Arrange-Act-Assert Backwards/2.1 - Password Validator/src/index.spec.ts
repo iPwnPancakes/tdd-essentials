@@ -33,12 +33,14 @@ describe('password validator', () => {
         })
     })
 
-    describe('Return an object containing a boolean result and an errors key that contains an error message or type for all errors in occurrence', () => {
+    describe('Return an object containing a boolean result', () => {
         it('should return an object', () => {
             expect(typeof isPasswordValid('ABCDEFG')).toBe('object');
         })
+    })
 
-        it('should return an error if not valid', () => {
+    describe('and an errors key that contains an error message or type for all errors in occurrence', () => {
+        it('should return an error if string is too small', () => {
             expect(isPasswordValid('ABCD').errors).toHaveLength(1);
         })
     })
