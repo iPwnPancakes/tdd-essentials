@@ -13,6 +13,10 @@ describe('password validator', () => {
         it('returns false for strings with 1 character', () => {
             expect(isPasswordValid('1')).toBeFalsy();
         })
+
+        it('returns false for strings with 16 characters', () => {
+            expect(isPasswordValid('123456789ABCDEFF')).toBeFalsy();
+        })
     })
 })
 
