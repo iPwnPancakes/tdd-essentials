@@ -55,6 +55,10 @@ describe('password validator', () => {
         it('should return an error if string has no numbers', () => {
             expect(isPasswordValid('ABCDEF').errors).toHaveLength(1);
         })
+
+        it('should be able to return multiple errors', () => {
+            expect(isPasswordValid('123').errors).toHaveLength(2);
+        })
     })
 })
 
