@@ -28,4 +28,12 @@ describe('stats calculator', () => {
             expect(computeStats(numbers).max).toBe(100);
         })
     })
+
+    describe('average value', () => {
+        it('returns 18.666666666667 given the values [2, 4, 21, -8, 53, 40]', () => {
+            const numbers = [2, 4, 21, -8, 53, 40];
+
+            expect(computeStats(numbers).average).toBe(18.666666666667);
+        })
+    })
 })
