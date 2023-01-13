@@ -28,4 +28,12 @@ describe('boolean calculator', () => {
             expect(evaluate(input)).toBeFalsy();
         })
     })
+
+    describe('negation statements', function () {
+        it('NOT TRUE should return false', () => {
+            const input = 'NOT TRUE';
+
+            expect(evaluate(input)).toBeFalsy();
+        })
+    });
 })
