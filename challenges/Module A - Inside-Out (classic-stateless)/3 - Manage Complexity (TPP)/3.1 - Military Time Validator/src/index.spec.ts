@@ -7,5 +7,11 @@ describe('military time validator', () => {
 
             expect(isValidRange(input)).toBeTruthy();
         })
+
+        it('returns false if given the range: 00:00 - 25:00', () => {
+            const input = '00:00 - 25:00';
+
+            expect(isValidRange(input)).toBeFalsy();
+        })
     })
 })
