@@ -42,4 +42,12 @@ describe('stats calculator', () => {
             expect(computeStats(numbers).average).toBe(0.333333333333);
         })
     })
+
+    describe('number of elements', () => {
+        it('returns 6 given the values [2, 4, 21, -8, 53, 40]', () => {
+            const numbers = [2, 4, 21, -8, 53, 40];
+
+            expect(computeStats(numbers).numberOfElements).toBe(6);
+        })
+    })
 })
