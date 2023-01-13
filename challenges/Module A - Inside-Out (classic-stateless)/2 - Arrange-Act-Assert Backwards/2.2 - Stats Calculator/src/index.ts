@@ -5,8 +5,7 @@ type Stats = {
 }
 
 export function computeStats(numbers: number[]): Stats {
-
-    return { min: getSmallestValue(numbers), max: getBiggestValue(numbers), average: 18.666666666667 };
+    return { min: getSmallestValue(numbers), max: getBiggestValue(numbers), average: getAverageValue(numbers) };
 }
 
 function getSmallestValue(numbers: number[]): number {
@@ -31,4 +30,16 @@ function getBiggestValue(numbers: number[]): number {
     }
 
     return currentBiggest;
+}
+
+function getAverageValue(numbers: number[]): number {
+    let sum = 0;
+
+    for (let i = 0; i < numbers.length; i++) {
+        sum += numbers[i];
+    }
+
+    const average = sum / numbers.length;
+
+    return Number(average.toFixed(12));
 }
