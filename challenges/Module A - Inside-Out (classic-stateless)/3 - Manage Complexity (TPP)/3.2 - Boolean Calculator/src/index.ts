@@ -1,3 +1,3 @@
 export function evaluate(str: string): boolean {
-    return false;
+    return true;
 }
