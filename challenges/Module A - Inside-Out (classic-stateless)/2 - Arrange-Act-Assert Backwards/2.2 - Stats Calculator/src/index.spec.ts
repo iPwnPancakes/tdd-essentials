@@ -21,5 +21,11 @@ describe('stats calculator', () => {
 
             expect(computeStats(numbers).max).toBe(53);
         })
+
+        it('returns 100 given the values [0, 0, 0, 100, 0, 99]', () => {
+            const numbers = [0, 0, 0, 100, 0, 99];
+
+            expect(computeStats(numbers).max).toBe(100);
+        })
     })
 })
