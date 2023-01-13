@@ -10,7 +10,7 @@ export function computeStats(numbers: number[]): Stats {
         min: getSmallestValue(numbers),
         max: getBiggestValue(numbers),
         average: getAverageValue(numbers),
-        numberOfElements: 6
+        numberOfElements: numbers.length
     };
 }
 
