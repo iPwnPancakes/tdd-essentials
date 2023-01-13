@@ -15,20 +15,6 @@ describe('boolean calculator', () => {
         })
     })
 
-    describe('simple combinations', () => {
-        it('TRUE AND TRUE should return true', () => {
-            const input = 'TRUE AND TRUE';
-
-            expect(evaluate(input)).toBeTruthy();
-        })
-
-        it('TRUE AND FALSE should return false', () => {
-            const input = 'TRUE AND FALSE';
-
-            expect(evaluate(input)).toBeFalsy();
-        })
-    })
-
     describe('negation statements', function () {
         it('NOT TRUE should return false', () => {
             const input = 'NOT TRUE';
@@ -42,4 +28,18 @@ describe('boolean calculator', () => {
             expect(evaluate(input)).toBeTruthy();
         })
     });
+
+    describe('simple combinations', () => {
+        it('TRUE AND TRUE should return true', () => {
+            const input = 'TRUE AND TRUE';
+
+            expect(evaluate(input)).toBeTruthy();
+        })
+
+        it('TRUE AND FALSE should return false', () => {
+            const input = 'TRUE AND FALSE';
+
+            expect(evaluate(input)).toBeFalsy();
+        })
+    })
 })
