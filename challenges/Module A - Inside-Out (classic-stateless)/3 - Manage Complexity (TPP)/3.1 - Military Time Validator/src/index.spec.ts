@@ -18,4 +18,16 @@ describe('military time validator', () => {
 
         expect(isValidRange(input)).toBeTruthy();
     })
+
+    it('returns false if given the range 25:00 - 12:23', () => {
+        const input = '25:00 - 12:23';
+
+        expect(isValidRange(input)).toBeFalsy();
+    })
+
+    it('returns true if given the range 22:00 - 23:12', () => {
+        const input = '22:00 - 23:12';
+
+        expect(isValidRange(input)).toBeTruthy();
+    })
 })
