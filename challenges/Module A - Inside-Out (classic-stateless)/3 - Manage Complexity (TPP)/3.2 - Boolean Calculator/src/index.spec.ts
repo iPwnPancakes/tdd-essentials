@@ -35,5 +35,11 @@ describe('boolean calculator', () => {
 
             expect(evaluate(input)).toBeFalsy();
         })
+
+        it('NOT FALSE should return true', () => {
+            const input = 'NOT FALSE';
+
+            expect(evaluate(input)).toBeTruthy();
+        })
     });
 })

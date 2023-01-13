@@ -4,6 +4,10 @@ export function evaluate(str: string): boolean {
         return evaluateSingleStatement(tokens[0]);
     }
 
+    if (tokens.length === 2) {
+        return !evaluateSingleStatement(tokens[1]);
+    }
+
     return evaluateCombinationStatement(tokens);
 }
 
@@ -13,6 +17,10 @@ function getTokensFromString(str: string): string[] {
 
 function evaluateSingleStatement(str: string): boolean {
     return str === 'TRUE';
+}
+
+function evaluateNegationStatement(not: string, token: string): boolean {
+    return !evaluateSingleStatement(token);
 }
 
 function evaluateCombinationStatement(strArr: string[]): boolean {
