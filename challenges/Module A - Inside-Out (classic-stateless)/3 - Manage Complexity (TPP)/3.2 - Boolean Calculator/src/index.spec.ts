@@ -14,4 +14,12 @@ describe('boolean calculator', () => {
             expect(evaluate(input)).toBeFalsy();
         })
     })
+
+    describe('simple combinations', () => {
+        it('TRUE AND TRUE should return true', () => {
+            const input = 'TRUE AND TRUE';
+
+            expect(evaluate(input)).toBeTruthy();
+        })
+    })
 })
