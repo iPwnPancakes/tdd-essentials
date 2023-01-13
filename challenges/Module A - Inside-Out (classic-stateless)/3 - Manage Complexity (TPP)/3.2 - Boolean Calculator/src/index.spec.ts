@@ -7,5 +7,11 @@ describe('boolean calculator', () => {
 
             expect(evaluate(input)).toBeTruthy();
         })
+
+        it('FALSE should return false', () => {
+            const input = 'FALSE';
+
+            expect(evaluate(input)).toBeFalsy();
+        })
     })
 })

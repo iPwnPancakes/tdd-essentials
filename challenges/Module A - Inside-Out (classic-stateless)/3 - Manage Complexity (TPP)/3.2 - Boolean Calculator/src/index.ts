@@ -1,3 +1,7 @@
 export function evaluate(str: string): boolean {
-    return true;
+    if (str === 'TRUE') {
+        return true;
+    }
+
+    return false;
 }
