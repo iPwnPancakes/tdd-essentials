@@ -35,5 +35,11 @@ describe('stats calculator', () => {
 
             expect(computeStats(numbers).average).toBe(18.666666666667);
         })
+
+        it('returns 0.333333333 given the values [0, 0, 1]', () => {
+            const numbers = [0, 0, 1];
+
+            expect(computeStats(numbers).average).toBe(0.333333333333);
+        })
     })
 })
