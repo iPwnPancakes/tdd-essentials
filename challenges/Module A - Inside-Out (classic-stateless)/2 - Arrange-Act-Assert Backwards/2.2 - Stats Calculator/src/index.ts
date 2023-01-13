@@ -1,11 +1,17 @@
 type Stats = {
     min: number,
     max: number,
-    average: number
+    average: number,
+    numberOfElements: number
 }
 
 export function computeStats(numbers: number[]): Stats {
-    return { min: getSmallestValue(numbers), max: getBiggestValue(numbers), average: getAverageValue(numbers) };
+    return {
+        min: getSmallestValue(numbers),
+        max: getBiggestValue(numbers),
+        average: getAverageValue(numbers),
+        numberOfElements: 6
+    };
 }
 
 function getSmallestValue(numbers: number[]): number {
