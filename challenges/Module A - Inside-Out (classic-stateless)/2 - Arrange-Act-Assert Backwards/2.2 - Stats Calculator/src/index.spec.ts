@@ -7,5 +7,11 @@ describe('stats calculator', () => {
 
             expect(computeStats(numbers).min).toBe(-8);
         })
+
+        it('returns 2 given the values [2, 4, 6, 8]', () => {
+            const numbers = [2, 4, 6, 8];
+
+            expect(computeStats(numbers).min).toBe(2);
+        })
     })
 })
