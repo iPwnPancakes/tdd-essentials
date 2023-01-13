@@ -49,5 +49,11 @@ describe('stats calculator', () => {
 
             expect(computeStats(numbers).numberOfElements).toBe(6);
         })
+
+        it('returns 1 given the values [3]', () => {
+            const numbers = [3];
+
+            expect(computeStats(numbers).numberOfElements).toBe(1);
+        })
     })
 })
