@@ -5,5 +5,5 @@ type Stats = {
 }
 
 export function computeStats(numbers: Number[]): Stats {
-    return { min: 0, max: 0, average: 0 };
+    return { min: -8, max: 0, average: 0 };
 }
